@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: overviewservice
+spec:
+  ports:
+    - port: 8082
+      targetPort: 8080
+      #nodePort: 30003
+      protocol: TCP
+  type: LoadBalancer
+  selector:
+    name: overview-label
