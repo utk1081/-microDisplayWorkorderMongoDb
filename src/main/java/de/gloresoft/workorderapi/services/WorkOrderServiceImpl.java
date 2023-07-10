@@ -4,6 +4,7 @@ import de.gloresoft.workorderapi.entities.WorkOrder;
 import de.gloresoft.workorderapi.exceptions.InsufficientBillaleDaysException;
 import de.gloresoft.workorderapi.exceptions.ResourceAlreadyExistsException;
 import de.gloresoft.workorderapi.exceptions.ResourceNotFoundException;
+import de.gloresoft.workorderapi.repositories.JobPostRepositoryMongo;
 import de.gloresoft.workorderapi.repositories.WorkOrderRepository;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 public class WorkOrderServiceImpl implements WorkOrderService {
 
     private final WorkOrderRepository workOrderRepository;
+    
 
     public WorkOrderServiceImpl(WorkOrderRepository workOrderRepository) {
         this.workOrderRepository = workOrderRepository;
